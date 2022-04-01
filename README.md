@@ -14,4 +14,4 @@
 * CSS
 * Javascript
 
-## responsive-portfolio-website https://batuhan37.github.io/Logistica-responsive-website/
+##  Logistica-responsive-website https://batuhan37.github.io/Logistica-responsive-website/src/
