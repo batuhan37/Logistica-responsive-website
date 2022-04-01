@@ -1,7 +1,78 @@
-$bg:red;
-$text:white;
-body{
-    background-color: $bg;
-    color:$text;
-}
+@import "./variables";
+@import "./global";
+@import "./mobile";
 
+//
+@mixin flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+// <!-- ===================================================================Header__section=================================================================================== -->
+
+.navbar {
+    position: sticky;
+    top: 0;
+    .nav__logo {
+        background-color: $red;
+        padding: 10px 25px;
+        h1 {
+            color: white;
+        }
+    }
+    .bi-headphones {
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: 0.3s;
+        color: $red;
+    }
+}
+// <!-- ===================================================================Home__section=================================================================================== -->
+
+.home__section {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/carousel-1.jpg);
+    background-position: center;
+    background-size: cover;
+    .home__content {
+        padding: 10rem 0;
+        color: white;
+
+        .home__title {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .home__subtitle  {
+            font-size: 60px;
+            line-height: 60px;
+
+            .home__title-red{
+                color: $red;
+            }
+        }
+        .home__description{
+            margin: 20px 0px;
+            max-width: 60%;
+        }
+        .home__buttons {
+            .home__button {
+                color: white;
+                padding: 10px 30px;
+                border-radius: 2px;
+                font-weight: bold;
+                border: 0px;
+                margin-right: 5px;
+                transition: 1s;
+            &:hover{
+                opacity: 50%;
+            }
+            }
+            .button-1 {
+                background-color: $red;
+            }
+            .button-2 {
+                background-color: $blue;
+            }
+        }
+    }
+}
+// <!-- ===================================================================Home__section=================================================================================== -->

@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* ul li {
+  list-style-type: none;
+}
+* ul li a {
+  text-decoration: none;
+}
+
+.active {
+  color: #ff3e42;
+}
+
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+.navbar .nav__logo {
+  background-color: #ff3e42;
+  padding: 10px 25px;
+}
+.navbar .nav__logo h1 {
+  color: white;
+}
+.navbar .bi-headphones {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #ff3e42;
+}
+
+.home__section {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/carousel-1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.home__section .home__content {
+  padding: 10rem 0;
+  color: white;
+}
+.home__section .home__content .home__title {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.home__section .home__content .home__subtitle {
+  font-size: 60px;
+  line-height: 60px;
+}
+.home__section .home__content .home__subtitle .home__title-red {
+  color: #ff3e42;
+}
+.home__section .home__content .home__description {
+  margin: 20px 0px;
+  max-width: 60%;
+}
+.home__section .home__content .home__buttons .home__button {
+  color: white;
+  padding: 10px 30px;
+  border-radius: 2px;
+  font-weight: bold;
+  border: 0px;
+  margin-right: 5px;
+  transition: 1s;
+}
+.home__section .home__content .home__buttons .home__button:hover {
+  opacity: 50%;
+}
+.home__section .home__content .home__buttons .button-1 {
+  background-color: #ff3e42;
+}
+.home__section .home__content .home__buttons .button-2 {
+  background-color: #53ceed;
+}/*# sourceMappingURL=index.css.map */
