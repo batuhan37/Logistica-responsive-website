@@ -11,7 +11,7 @@
 ## Used Technologies
 
 * Html
-* CSS
+* CSS-SCSS
 * Javascript
 
 ##  Logistica-responsive-website https://batuhan37.github.io/Logistica-responsive-website/src/
