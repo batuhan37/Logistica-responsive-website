@@ -3,16 +3,26 @@
 @import "./mobile";
 
 //
-@mixin flexcenter {
+@mixin flex {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+@mixin grid {
+    display: grid;
+    align-items: center;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
 }
 // <!-- ===================================================================Header__section=================================================================================== -->
 
-.navbar {
+header {
     position: sticky;
     top: 0;
+    background: white;
+
     .nav__logo {
         background-color: $red;
         padding: 10px 25px;
@@ -27,6 +37,7 @@
         color: $red;
     }
 }
+
 // <!-- ===================================================================Home__section=================================================================================== -->
 
 .home__section {
@@ -38,18 +49,18 @@
         color: white;
 
         .home__title {
-            font-size: 18px;
+            font-size: $subtitle;
             margin-bottom: 20px;
         }
-        .home__subtitle  {
+        .home__subtitle {
             font-size: 60px;
             line-height: 60px;
 
-            .home__title-red{
+            .home__title-red {
                 color: $red;
             }
         }
-        .home__description{
+        .home__description {
             margin: 20px 0px;
             max-width: 60%;
         }
@@ -62,9 +73,9 @@
                 border: 0px;
                 margin-right: 5px;
                 transition: 1s;
-            &:hover{
-                opacity: 50%;
-            }
+                &:hover {
+                    opacity: 50%;
+                }
             }
             .button-1 {
                 background-color: $red;
@@ -75,4 +86,270 @@
         }
     }
 }
-// <!-- ===================================================================Home__section=================================================================================== -->
+// <!-- ===================================================================About__section=================================================================================== -->
+
+.about__container {
+    @include grid();
+
+    padding: 7rem 0;
+    .about__picture {
+        justify-self: end;
+        align-self: center;
+        margin-right: 20px;
+        img {
+            max-width: 100%;
+            height: auto;
+            width: clamp(650px, 1000px, 1400px);
+            height: 500px;
+            object-fit: fill;
+        }
+    }
+    .about__content {
+        margin-left: 12px;
+        padding-right: 5rem;
+        .about__title {
+            font-size: $title;
+            margin-bottom: 20px;
+            font-weight: 800;
+            position: relative;
+            &::before {
+                content: "";
+                height: 13px;
+                width: 110px;
+                background-color: #2c97e4;
+                position: absolute;
+                left: 0;
+                top: -15px;
+                transition: 0.7s;
+                border-radius: 10px;
+                opacity: 50%;
+            }
+        }
+        .about__description {
+            font-size: $text;
+            color: gray;
+            margin-bottom: 20px;
+        }
+        .about__info {
+            @include flex();
+            justify-content: start;
+            .about__iconbox {
+                margin-bottom: 40px;
+                .about__iconbox-title {
+                    font-weight: 900;
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+
+                .bi-globe {
+                    color: $red;
+                    font-size: 36px;
+                }
+                .bxs-truck {
+                    color: $red;
+                    font-size: 46px;
+                }
+            }
+        }
+
+        .about__button {
+            color: white;
+            padding: 10px 30px;
+            border-radius: 2px;
+            font-weight: bold;
+            border: 0px;
+            margin-right: 5px;
+            transition: 1s;
+            background-color: $red;
+            &:hover {
+                opacity: 50%;
+            }
+        }
+    }
+}
+// <!-- ===================================================================Skills__section=================================================================================== -->
+
+.skills__container {
+    @include grid();
+
+    .skills__title {
+        font-size: $title;
+        margin-bottom: 20px;
+        font-weight: 800;
+        position: relative;
+        &::before {
+            content: "";
+            height: 13px;
+            width: 110px;
+            background-color: #2c97e4;
+            position: absolute;
+            left: 0;
+            top: -15px;
+            transition: 0.7s;
+            border-radius: 10px;
+            opacity: 50%;
+        }
+    }
+
+    .skills__description {
+        font-size: $text;
+        color: gray;
+        margin-bottom: 20px;
+    }
+    .skills__info {
+        @include flex();
+        justify-content: start;
+        .skills__info-icon {
+            background-color: $red;
+            font-size: 40px;
+            color: white;
+            padding: 0 10px;
+            margin-right: 10px;
+        }
+        .skills__info-subtitle {
+            font-weight: 900px;
+            font-size: $subtitle;
+        }
+        .skills__info-number {
+            font-size: 34px;
+            line-height: 30px;
+            color: $red;
+            font-weight: 500;
+        }
+    }
+    .skills__box {
+        @include flex();
+        justify-content: center;
+
+        .skills__card {
+            margin: 10px 10px 10px 0px;
+            color: white;
+            padding: 10px 100px 20px 20px;
+
+            .skills__card-icon {
+                font-size: 36px;
+            }
+            .skills__card-title {
+                font-size: 36px;
+            }
+            .skills__card-description {
+            }
+        }
+        .card-1 {
+            background-color: $red;
+        }
+        .card-2 {
+            background-color: $blue;
+        }
+        .card-3 {
+            background-color: $green;
+        }
+    }
+}
+
+// <!-- ===================================================================Services__section=================================================================================== -->
+.services__container{
+padding: 7rem 0;
+.services__content{
+text-align: center;
+.services__title {
+    font-size: $title;
+    margin-bottom: 20px;
+    font-weight: 800;
+    position: relative;
+    &::before {
+        content: "";
+        height: 13px;
+        width: 110px;
+        background-color: #2c97e4;
+        position: absolute;
+        top: -15px;
+        left: 45%;
+        transition: 0.7s;
+        border-radius: 10px;
+        opacity: 50%;
+    }
+}
+}
+.services__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    .services__card {
+        padding: 20px;
+        box-shadow: 0 1rem 3rem rgba(black, 0.1);
+        .services__picture {
+            margin-bottom: 10px;
+            .services__img {
+                width: 100%;
+            }
+        }
+        .skills__card-title {
+            font-size: 24px;
+            margin: 10px 0px;
+        }
+        .skills__card-description {
+            color: gray;
+            margin-bottom: 20px;
+        }
+        .skills__card-icon {
+            font-size: $card-title;
+            color: white;
+
+            .bx-right-arrow-alt {
+                padding: 5px 5px 5px 0px;
+                background-color: $red;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
+        }
+    }
+}
+}
+
+// <!-- ===================================================================Company__section=================================================================================== -->
+.company__container {
+    @include grid();
+    align-items: flex-start;
+    .company__title {
+        font-size: $title;
+        margin-bottom: 20px;
+        font-weight: 800;
+        position: relative;
+        &::before {
+            content: "";
+            height: 13px;
+            width: 110px;
+            background-color: #2c97e4;
+            position: absolute;
+            left: 0;
+            top: -15px;
+            transition: 0.7s;
+            border-radius: 10px;
+            opacity: 50%;
+        }
+    }
+
+    .company__description {
+        font-size: $text;
+        color: gray;
+        
+    }
+    .company__info {
+        @include flex();
+        justify-content: start;
+        align-items: flex-start;
+        .company__info-icon {
+            font-size: 40px;
+            color: $red;
+            margin-right: 20px;
+            
+        }
+        .company__info-subtitle {
+            font-weight: 900px;
+            font-size: $subtitle;
+        }
+        
+    }
+}

@@ -12,23 +12,28 @@
   text-decoration: none;
 }
 
+.container {
+  padding: 0px;
+}
+
 .active {
   color: #ff3e42;
 }
 
-.navbar {
+header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  background: white;
 }
-.navbar .nav__logo {
+header .nav__logo {
   background-color: #ff3e42;
   padding: 10px 25px;
 }
-.navbar .nav__logo h1 {
+header .nav__logo h1 {
   color: white;
 }
-.navbar .bi-headphones {
+header .bi-headphones {
   font-size: 1.5rem;
   cursor: pointer;
   transition: 0.3s;
@@ -76,4 +81,275 @@
 }
 .home__section .home__content .home__buttons .button-2 {
   background-color: #53ceed;
+}
+
+.about__container {
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  padding: 7rem 0;
+}
+.about__container .about__picture {
+  justify-self: end;
+  align-self: center;
+  margin-right: 20px;
+}
+.about__container .about__picture img {
+  max-width: 100%;
+  height: auto;
+  width: 1000px;
+  height: 500px;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.about__container .about__content {
+  margin-left: 12px;
+  padding-right: 5rem;
+}
+.about__container .about__content .about__title {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-weight: 800;
+  position: relative;
+}
+.about__container .about__content .about__title::before {
+  content: "";
+  height: 13px;
+  width: 110px;
+  background-color: #2c97e4;
+  position: absolute;
+  left: 0;
+  top: -15px;
+  transition: 0.7s;
+  border-radius: 10px;
+  opacity: 50%;
+}
+.about__container .about__content .about__description {
+  font-size: 16px;
+  color: gray;
+  margin-bottom: 20px;
+}
+.about__container .about__content .about__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  justify-content: start;
+}
+.about__container .about__content .about__info .about__iconbox {
+  margin-bottom: 40px;
+}
+.about__container .about__content .about__info .about__iconbox .about__iconbox-title {
+  font-weight: 900;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.about__container .about__content .about__info .about__iconbox .bi-globe {
+  color: #ff3e42;
+  font-size: 36px;
+}
+.about__container .about__content .about__info .about__iconbox .bxs-truck {
+  color: #ff3e42;
+  font-size: 46px;
+}
+.about__container .about__content .about__button {
+  color: white;
+  padding: 10px 30px;
+  border-radius: 2px;
+  font-weight: bold;
+  border: 0px;
+  margin-right: 5px;
+  transition: 1s;
+  background-color: #ff3e42;
+}
+.about__container .about__content .about__button:hover {
+  opacity: 50%;
+}
+
+.skills__container {
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+}
+.skills__container .skills__title {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-weight: 800;
+  position: relative;
+}
+.skills__container .skills__title::before {
+  content: "";
+  height: 13px;
+  width: 110px;
+  background-color: #2c97e4;
+  position: absolute;
+  left: 0;
+  top: -15px;
+  transition: 0.7s;
+  border-radius: 10px;
+  opacity: 50%;
+}
+.skills__container .skills__description {
+  font-size: 16px;
+  color: gray;
+  margin-bottom: 20px;
+}
+.skills__container .skills__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  justify-content: start;
+}
+.skills__container .skills__info .skills__info-icon {
+  background-color: #ff3e42;
+  font-size: 40px;
+  color: white;
+  padding: 0 10px;
+  margin-right: 10px;
+}
+.skills__container .skills__info .skills__info-subtitle {
+  font-weight: 900px;
+  font-size: 18px;
+}
+.skills__container .skills__info .skills__info-number {
+  font-size: 34px;
+  line-height: 30px;
+  color: #ff3e42;
+  font-weight: 500;
+}
+.skills__container .skills__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  justify-content: center;
+}
+.skills__container .skills__box .skills__card {
+  margin: 10px 10px 10px 0px;
+  color: white;
+  padding: 10px 100px 20px 20px;
+}
+.skills__container .skills__box .skills__card .skills__card-icon {
+  font-size: 36px;
+}
+.skills__container .skills__box .skills__card .skills__card-title {
+  font-size: 36px;
+}
+.skills__container .skills__box .card-1 {
+  background-color: #ff3e42;
+}
+.skills__container .skills__box .card-2 {
+  background-color: #53ceed;
+}
+.skills__container .skills__box .card-3 {
+  background-color: #198855;
+}
+
+.services__container {
+  padding: 7rem 0;
+}
+.services__container .services__content {
+  text-align: center;
+}
+.services__container .services__content .services__title {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-weight: 800;
+  position: relative;
+}
+.services__container .services__content .services__title::before {
+  content: "";
+  height: 13px;
+  width: 110px;
+  background-color: #2c97e4;
+  position: absolute;
+  top: -15px;
+  left: 45%;
+  transition: 0.7s;
+  border-radius: 10px;
+  opacity: 50%;
+}
+.services__container .services__info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+}
+.services__container .services__info .services__card {
+  padding: 20px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+}
+.services__container .services__info .services__card .services__picture {
+  margin-bottom: 10px;
+}
+.services__container .services__info .services__card .services__picture .services__img {
+  width: 100%;
+}
+.services__container .services__info .services__card .skills__card-title {
+  font-size: 24px;
+  margin: 10px 0px;
+}
+.services__container .services__info .services__card .skills__card-description {
+  color: gray;
+  margin-bottom: 20px;
+}
+.services__container .services__info .services__card .skills__card-icon {
+  font-size: 30px;
+  color: white;
+}
+.services__container .services__info .services__card .skills__card-icon .bx-right-arrow-alt {
+  padding: 5px 5px 5px 0px;
+  background-color: #ff3e42;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.company__container {
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  align-items: flex-start;
+}
+.company__container .company__title {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-weight: 800;
+  position: relative;
+}
+.company__container .company__title::before {
+  content: "";
+  height: 13px;
+  width: 110px;
+  background-color: #2c97e4;
+  position: absolute;
+  left: 0;
+  top: -15px;
+  transition: 0.7s;
+  border-radius: 10px;
+  opacity: 50%;
+}
+.company__container .company__description {
+  font-size: 16px;
+  color: gray;
+}
+.company__container .company__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  justify-content: start;
+  align-items: flex-start;
+}
+.company__container .company__info .company__info-icon {
+  font-size: 40px;
+  color: #ff3e42;
+  margin-right: 20px;
+}
+.company__container .company__info .company__info-subtitle {
+  font-weight: 900px;
+  font-size: 18px;
 }/*# sourceMappingURL=index.css.map */
