@@ -288,19 +288,19 @@ header .bi-headphones {
 .services__container .services__info .services__card .services__picture .services__img {
   width: 100%;
 }
-.services__container .services__info .services__card .skills__card-title {
+.services__container .services__info .services__card .services__card-title {
   font-size: 24px;
   margin: 10px 0px;
 }
-.services__container .services__info .services__card .skills__card-description {
+.services__container .services__info .services__card .services__card-description {
   color: gray;
   margin-bottom: 20px;
 }
-.services__container .services__info .services__card .skills__card-icon {
+.services__container .services__info .services__card .services__card-icon {
   font-size: 30px;
   color: white;
 }
-.services__container .services__info .services__card .skills__card-icon .bx-right-arrow-alt {
+.services__container .services__info .services__card .services__card-icon .bx-right-arrow-alt {
   padding: 5px 5px 5px 0px;
   background-color: #ff3e42;
   border-top-right-radius: 20px;
@@ -352,4 +352,84 @@ header .bi-headphones {
 .company__container .company__info .company__info-subtitle {
   font-weight: 900px;
   font-size: 18px;
+}
+
+.pricing__container {
+  padding: 7rem 0;
+}
+.pricing__container .pricing__content {
+  text-align: center;
+}
+.pricing__container .pricing__content .pricing__title {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-weight: 800;
+  position: relative;
+}
+.pricing__container .pricing__content .pricing__title::before {
+  content: "";
+  height: 13px;
+  width: 110px;
+  background-color: #2c97e4;
+  position: absolute;
+  top: -15px;
+  left: 46%;
+  transition: 0.7s;
+  border-radius: 10px;
+  opacity: 50%;
+}
+.pricing__container .pricing__info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 0px 200px;
+}
+.pricing__container .pricing__info .pricing__card {
+  padding: 15px 10px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+}
+.pricing__container .pricing__info .pricing__card .pricing__price {
+  padding: 5px;
+  border-bottom: 1px solid rgb(216, 214, 214);
+  margin-bottom: 20px;
+}
+.pricing__container .pricing__info .pricing__card .pricing__price .pricing__price-subtitle {
+  font-size: 12px;
+  color: #ff3e42;
+}
+.pricing__container .pricing__info .pricing__card .pricing__price .pricing__price-title {
+  line-height: 30px;
+  font-size: 48px;
+  font-weight: 900;
+}
+.pricing__container .pricing__info .pricing__card .pricing__price .pricing__price-title sup {
+  font-size: 16px;
+  font-weight: 900;
+  top: -1.2em;
+}
+.pricing__container .pricing__info .pricing__card .pricing__price .pricing__price-title span {
+  font-size: 16px;
+  font-weight: 600;
+}
+.pricing__container .pricing__info .pricing__card .pricing__list {
+  padding-left: 10px;
+}
+.pricing__container .pricing__info .pricing__card .pricing__list .pricing__item {
+  margin-bottom: 7px;
+}
+.pricing__container .pricing__info .pricing__card .pricing__list .pricing__item .pricing__link {
+  color: rgb(182, 177, 177);
+}
+.pricing__container .pricing__info .pricing__card .pricing__list .pricing__item .bx-check {
+  margin-right: 5px;
+}
+.pricing__container .pricing__info .pricing__card .pricing__card-icon {
+  font-size: 30px;
+  color: white;
+}
+.pricing__container .pricing__info .pricing__card .pricing__card-icon .bx-right-arrow-alt {
+  padding: 5px 5px 5px 0px;
+  background-color: #ff3e42;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }/*# sourceMappingURL=index.css.map */
