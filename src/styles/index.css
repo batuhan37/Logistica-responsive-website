@@ -432,4 +432,153 @@ header .bi-headphones {
   background-color: #ff3e42;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+
+.contact__container {
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+}
+.contact__container .contact__title {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-weight: 800;
+  position: relative;
+}
+.contact__container .contact__title::before {
+  content: "";
+  height: 13px;
+  width: 110px;
+  background-color: #2c97e4;
+  position: absolute;
+  left: 0;
+  top: -15px;
+  transition: 0.7s;
+  border-radius: 10px;
+  opacity: 50%;
+}
+.contact__container .contact__description {
+  font-size: 16px;
+  color: gray;
+  margin-bottom: 20px;
+}
+.contact__container .contact__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  justify-content: start;
+}
+.contact__container .contact__info .contact__info-icon {
+  background-color: #ff3e42;
+  font-size: 40px;
+  color: white;
+  padding: 0 10px;
+  margin-right: 10px;
+}
+.contact__container .contact__info .contact__info-subtitle {
+  font-weight: 900px;
+  font-size: 18px;
+}
+.contact__container .contact__info .contact__info-number {
+  font-size: 34px;
+  line-height: 30px;
+  color: #ff3e42;
+  font-weight: 500;
+}
+.contact__container .contact__box {
+  padding: 30px;
+  background-color: rgb(250, 242, 235);
+}
+.contact__container .contact__box .contact__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr, 1fr, auto, 1fr;
+  gap: 5px;
+}
+.contact__container .contact__box .contact__form input {
+  border: 0;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+.contact__container .contact__box .contact__form .submit {
+  color: white;
+  padding: 10px 10px;
+  border-radius: 2px;
+  font-weight: bold;
+  border: 0px;
+  transition: 1s;
+  background-color: #ff3e42;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.contact__container .contact__box .contact__form .submit:hover {
+  opacity: 50%;
+}
+.contact__container .contact__box .contact__form textarea {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  padding: 5px 10px;
+  border: 0;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+}
+
+.team__container {
+  padding: 7rem 0;
+}
+.team__container .team__content {
+  text-align: center;
+}
+.team__container .team__content .team__title {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-weight: 800;
+  position: relative;
+}
+.team__container .team__content .team__title::before {
+  content: "";
+  height: 13px;
+  width: 110px;
+  background-color: #2c97e4;
+  position: absolute;
+  top: -15px;
+  left: 45%;
+  transition: 0.7s;
+  border-radius: 10px;
+  opacity: 50%;
+}
+.team__container .team__info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 20px;
+}
+.team__container .team__info .team__card {
+  padding: 20px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+}
+.team__container .team__info .team__card .team__picture {
+  margin-bottom: 10px;
+}
+.team__container .team__info .team__card .team__picture .team__img {
+  width: 100%;
+}
+.team__container .team__info .team__card .team__card-title {
+  font-size: 24px;
+  margin: 10px 0px;
+}
+.team__container .team__info .team__card .team__card-description {
+  color: gray;
+  margin-bottom: 20px;
+}
+.team__container .team__info .team__card .team__card-icon {
+  font-size: 30px;
+  color: white;
+}
+.team__container .team__info .team__card .team__card-icon .bx-right-arrow-alt {
+  padding: 5px 5px 5px 0px;
+  background-color: #ff3e42;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }/*# sourceMappingURL=index.css.map */
