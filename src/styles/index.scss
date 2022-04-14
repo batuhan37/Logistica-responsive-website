@@ -586,3 +586,74 @@ header {
         }
     }
 }
+// <!-- ===================================================================testimonial__seection=================================================================================== -->
+
+.testimonial__container{
+        padding: 7rem 0;
+        .testimonial__content {
+            text-align: center;
+            .testimonial__title {
+                font-size: $title;
+                margin-bottom: 20px;
+                font-weight: 800;
+                position: relative;
+                &::before {
+                    content: "";
+                    height: 13px;
+                    width: 110px;
+                    background-color: #2c97e4;
+                    position: absolute;
+                    top: -15px;
+                    left: 45%;
+                    transition: 0.7s;
+                    border-radius: 10px;
+                    opacity: 50%;
+                }
+            }
+        }
+        .swiper-wrapper{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            .testimonial__card {
+                padding: 10px 20px;
+                box-shadow: 0 1rem 3rem rgba(black, 0.1);
+                .testimonial__profile {
+                    
+                    display: flex;
+                    align-items: center;
+                    .testimonial__profile-content{
+                        padding: 30px 0px 0px 20px;
+
+                    }
+                }
+                .testimonial__card-title {
+                    font-size: 20px;
+                    margin: 10px 0px;
+                    font-weight: 900;   
+                }
+                .testimonial__card-subtitle{
+                    font-size: 14px;
+                    
+                }
+                .testimonial__card-description {
+                    color: gray;
+                    margin-bottom: 10px;
+                }
+                .testimonial__card-icon {
+                    font-size: $card-title;
+                    color: white;
+    
+                    .bx-right-arrow-alt {
+                        padding: 3px 3px 3px 0px;
+                        background-color: $red;
+                        border-top-right-radius: 20px;
+                        border-bottom-right-radius: 20px;
+                    }
+                }
+            }
+        }
+   
+    
+}
+
