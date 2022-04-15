@@ -584,7 +584,7 @@ header .bi-headphones {
 }
 
 .testimonial__container {
-  padding: 7rem 0;
+  padding-bottom: 7rem;
 }
 .testimonial__container .testimonial__content {
   text-align: center;
@@ -607,41 +607,66 @@ header .bi-headphones {
   border-radius: 10px;
   opacity: 50%;
 }
-.testimonial__container .swiper-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+.testimonial__container .swiper {
+  width: 100%;
 }
-.testimonial__container .swiper-wrapper .testimonial__card {
+.testimonial__container .swiper .swiper-wrapper {
+  display: flex;
+}
+.testimonial__container .swiper .swiper-wrapper .swiper-slide {
+  font-size: 18px;
+  /* Center slide text vertically */
+  justify-content: center;
+  align-items: center;
+}
+.testimonial__container .swiper .swiper-wrapper .testimonial__card {
   padding: 10px 20px;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
 }
-.testimonial__container .swiper-wrapper .testimonial__card .testimonial__profile {
+.testimonial__container .swiper .swiper-wrapper .testimonial__card .testimonial__profile {
   display: flex;
   align-items: center;
 }
-.testimonial__container .swiper-wrapper .testimonial__card .testimonial__profile .testimonial__profile-content {
+.testimonial__container .swiper .swiper-wrapper .testimonial__card .testimonial__profile .testimonial__profile-content {
   padding: 30px 0px 0px 20px;
 }
-.testimonial__container .swiper-wrapper .testimonial__card .testimonial__card-title {
+.testimonial__container .swiper .swiper-wrapper .testimonial__card .testimonial__card-title {
   font-size: 20px;
   margin: 10px 0px;
   font-weight: 900;
 }
-.testimonial__container .swiper-wrapper .testimonial__card .testimonial__card-subtitle {
+.testimonial__container .swiper .swiper-wrapper .testimonial__card .testimonial__card-subtitle {
   font-size: 14px;
 }
-.testimonial__container .swiper-wrapper .testimonial__card .testimonial__card-description {
+.testimonial__container .swiper .swiper-wrapper .testimonial__card .testimonial__card-description {
   color: gray;
   margin-bottom: 10px;
 }
-.testimonial__container .swiper-wrapper .testimonial__card .testimonial__card-icon {
+.testimonial__container .swiper .swiper-wrapper .testimonial__card .testimonial__card-icon {
   font-size: 30px;
   color: white;
 }
-.testimonial__container .swiper-wrapper .testimonial__card .testimonial__card-icon .bx-right-arrow-alt {
+.testimonial__container .swiper .swiper-wrapper .testimonial__card .testimonial__card-icon .bx-right-arrow-alt {
   padding: 3px 3px 3px 0px;
   background-color: #ff3e42;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+
+.footer__section {
+  padding: 7rem 0;
+  background-color: #0f073d;
+  background-image: url(../img/map.png);
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+.footer__section .footer__container {
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.footer__section .footer__container li a {
+  color: white;
 }/*# sourceMappingURL=index.css.map */
