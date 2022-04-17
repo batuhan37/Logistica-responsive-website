@@ -25,6 +25,7 @@ header {
   position: sticky;
   top: 0;
   background: white;
+  z-index: 2;
 }
 header .nav__logo {
   background-color: #ff3e42;
@@ -41,9 +42,39 @@ header .bi-headphones {
 }
 
 .home__section {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/carousel-1.jpg);
+  background-image: url(../img/carousel-1.jpg);
   background-position: center;
   background-size: cover;
+  transition: 5s;
+  -webkit-animation-name: animate;
+          animation-name: animate;
+  animation-direction: alternate-reverse;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+@-webkit-keyframes animate {
+  0%, 100% {
+    background-image: url(../img/carousel-1.jpg);
+  }
+  75% {
+    background-image: url(../img/carousel-2.jpg);
+  }
+}
+@keyframes animate {
+  0%, 100% {
+    background-image: url(../img/carousel-1.jpg);
+  }
+  75% {
+    background-image: url(../img/carousel-2.jpg);
+  }
 }
 .home__section .home__content {
   padding: 10rem 0;
@@ -133,9 +164,8 @@ header .bi-headphones {
 .about__container .about__content .about__info {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex: 1;
-  justify-content: start;
 }
 .about__container .about__content .about__info .about__iconbox {
   margin-bottom: 40px;
@@ -199,9 +229,8 @@ header .bi-headphones {
 .skills__container .skills__info {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex: 1;
-  justify-content: start;
 }
 .skills__container .skills__info .skills__info-icon {
   background-color: #ff3e42;
@@ -215,7 +244,7 @@ header .bi-headphones {
   font-size: 18px;
 }
 .skills__container .skills__info .skills__info-number {
-  font-size: 34px;
+  font-size: 30px;
   line-height: 30px;
   color: #ff3e42;
   font-weight: 500;
@@ -223,9 +252,8 @@ header .bi-headphones {
 .skills__container .skills__box {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex: 1;
   justify-content: center;
+  flex: 1;
 }
 .skills__container .skills__box .skills__card {
   margin: 10px 10px 10px 0px;
@@ -339,10 +367,8 @@ header .bi-headphones {
 .company__container .company__info {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex: 1;
-  justify-content: start;
-  align-items: flex-start;
 }
 .company__container .company__info .company__info-icon {
   font-size: 40px;
@@ -466,9 +492,8 @@ header .bi-headphones {
 .contact__container .contact__info {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex: 1;
-  justify-content: start;
 }
 .contact__container .contact__info .contact__info-icon {
   background-color: #ff3e42;
@@ -482,7 +507,7 @@ header .bi-headphones {
   font-size: 18px;
 }
 .contact__container .contact__info .contact__info-number {
-  font-size: 34px;
+  font-size: 30px;
   line-height: 30px;
   color: #ff3e42;
   font-weight: 500;
@@ -654,19 +679,125 @@ header .bi-headphones {
 }
 
 .footer__section {
-  padding: 7rem 0;
-  background-color: #0f073d;
+  padding-top: 7rem;
+  padding-bottom: 1rem;
+  background-color: #07031d;
   background-image: url(../img/map.png);
   background-position: center;
   background-size: cover;
   color: white;
 }
-.footer__section .footer__container {
+.footer__section .footer__top {
   display: grid;
-  align-items: center;
   gap: 1rem;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-.footer__section .footer__container li a {
+.footer__section .footer__top ul {
+  padding: 0;
+}
+.footer__section .footer__top ul li a {
+  color: rgb(158, 154, 154);
+  font-size: 12px;
+}
+.footer__section .footer__top ul li a i {
+  margin-right: 5px;
+}
+.footer__section .footer__top .footer__subtitle {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 900;
+}
+.footer__section .footer__top .footer__contact {
+  font-size: 14px;
+  line-height: 25px;
+}
+.footer__section .footer__top .footer__contact .footer__contact-icons .bx {
+  font-size: 16px;
+  border: 2px solid;
+  border-color: rgba(233, 233, 233, 0.3);
+  border-radius: 50%;
+  padding: 4px;
+}
+.footer__section .footer__top .footer__description {
+  color: rgb(158, 154, 154);
+  font-size: 12px;
+}
+.footer__section .footer__top .footer__form {
+  background-color: white;
+  padding: 5px;
+  display: flex;
+}
+.footer__section .footer__top .footer__form input {
+  border: 0;
+}
+.footer__section .footer__top .footer__form .footer__submit {
   color: white;
+  padding: 5px 10px;
+  border-radius: 2px;
+  font-weight: bold;
+  border: 0px;
+  transition: 1s;
+  background-color: #ff3e42;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.footer__section .footer__top .footer__form .footer__submit:hover {
+  opacity: 50%;
+}
+.footer__section .footer__bottom {
+  padding-top: 50px;
+}
+.footer__section .footer__bottom .footer__copy {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  padding-top: 20px;
+  border-top: 1px solid;
+  border-color: rgba(233, 233, 233, 0.3);
+  color: rgb(158, 154, 154);
+  font-size: 12px;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 3s ease;
+}
+
+.reveal.animate {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+@media screen and (max-width: 968px) {
+  .about__container,
+.skills__container,
+.contact__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .company__container {
+    grid-template-columns: 1fr;
+  }
+  .company__container .company__picture {
+    text-align: center;
+  }
+
+  .services__container .services__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .pricing__container .pricing__info {
+    grid-template-columns: 1fr 1fr;
+    padding: 0px;
+  }
+
+  .team__container .team__info {
+    grid-template-columns: 1fr 1fr;
+  }
 }/*# sourceMappingURL=index.css.map */

@@ -16,6 +16,14 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
+    <!-- ================================================================animete-css====================================================================================== -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- ================================================================aos-css====================================================================================== -->
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
     <!-- ================================================================bootsrap====================================================================================== -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -103,7 +111,7 @@
         <!-- ===================================================================Home__section=================================================================================== -->
         <section class="home__section" id="home">
             <div class="home__container container">
-                <div class="home__content  ">
+                <div class="home__content reveal ">
                     <h5 class="home__title">TRANSPORT A LOGISTICS SOLUTIONS</h3>
                         <span class="home__subtitle">#1 Place For Your <br> <span
                                 class="home__title-red">Logistics</span> Solution</span>
@@ -121,9 +129,9 @@
         <!-- ===================================================================About__section=================================================================================== -->
         <section class="about__section" id="about">
 
-            <div class="about__container ">
+            <div class="about__container container reveal">
 
-                <div class="about__picture">
+                <div class="about__picture  ">
                     <img src="./img/about.jpg" alt="">
                 </div>
 
@@ -164,10 +172,10 @@
         <!-- ===================================================================Skills__section=================================================================================== -->
 
         <section class="skills__section">
-            <div class="skills__container container ">
+            <div class="skills__container container reveal">
 
 
-                <div class="skills__content ">
+                <div class="skills__content  ">
 
                     <h5 class="skills__title">#1 Place To Manage All of Your Shipments</h5>
                     <div class="skills__description ">
@@ -189,7 +197,7 @@
 
                 </div>
 
-                <div class="skills__box">
+                <div class="skills__box  ">
 
                     <div class="skills__box-2">
                         <div class="skills__card card-1">
@@ -228,7 +236,7 @@
         <section class="services__section" id="services">
 
 
-            <div class="services__container  container ">
+            <div class="services__container  container reveal">
                 <div class="services__content">
                     <h5 class="services__title">Explore Our Services</h5>
                 </div>
@@ -314,7 +322,7 @@
         <!-- ===================================================================Company__section=================================================================================== -->
 
         <section class="company__section">
-            <div class="company__container container">
+            <div class="company__container container reveal">
                 <div class="company__content ">
 
                     <h5 class="company__title">#1 Place To Manage All of Your Shipments</h5>
@@ -348,7 +356,7 @@
         <!-- ==================================================================Pricing__section=================================================================================== -->
 
         <section class="pricing__section" id="pricing">
-            <div class="pricing__container container">
+            <div class="pricing__container container reveal">
 
                 <div class="pricing__content">
                     <h5 class="pricing__title">Perfect Pricing Plan</h5>
@@ -446,7 +454,7 @@
         <!-- ==================================================================Contact__section=================================================================================== -->
 
         <section class="contact__section">
-            <div class="contact__container container">
+            <div class="contact__container container reveal">
 
 
 
@@ -518,7 +526,7 @@
         <!-- ==================================================================Team__section=================================================================================== -->
 
         <section class="team_section" id="work">
-            <div class="team__container container">
+            <div class="team__container container reveal">
                 <div class="team__content">
                     <h5 class="team__title">Expert Team Members</h5>
                 </div>
@@ -569,8 +577,8 @@
         </section>
         <!-- ==================================================================Team__section=================================================================================== -->
 
-        <section class="testimonial__section">
-            <div class="testimonial__container container ">
+        <section class="testimonial__section ">
+            <div class="testimonial__container container reveal">
                 <div class="testimonial__content">
                     <h5 class="testimonial__title">Our Clients Say! </h5>
                 </div>
@@ -679,94 +687,124 @@
 
         <footer class="footer__section" id="footer">
 
-            <div class="footer__container container">
-                <div class="footer__contact">
-                    <h5>Contact Us</h5>
-                    <ul>
+            <div class="footer__container container reveal">
+                <div class="footer__top">
+                    <div class="footer__contact">
+                        <h5 class="footer__subtitle">Contact Us</h5>
+                        <ul>
 
-                        <li>
-                            <a href="https://github.com/twbs/bootstrap/tree/v4-dev"><i class='bx bx-location-plus '></i>
-                                New York, NY 535022</a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/twbs/icons"><i class='bx bxs-phone '></i> +1
-                                5589 55488 55</a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/twbs/rfs"><i class='bx bxs-envelope '></i>
-                                contact@example.com</a>
-                        </li>
+                            <li>
+                                <a href="https://github.com/twbs/bootstrap/tree/v4-dev"><i
+                                        class='bx bx-location-plus '></i>
+                                    New York, NY 535022</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/twbs/icons"><i class='bx bxs-phone '></i> +1
+                                    5589 55488 55</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/twbs/rfs"><i class='bx bxs-envelope '></i>
+                                    contact@example.com</a>
+                            </li>
 
-                    </ul>
-                    <div class="footer__contact-icons">
-                        <i class='bx bxl-instagram'></i>
-                        <i class='bx bxl-whatsapp'></i>
-                        <i class='bx bxl-github'></i>
-                        <i class='bx bxl-tumblr'></i>
+                        </ul>
+                        <div class="footer__contact-icons">
+                            <i class='bx bxl-instagram'></i>
+                            <i class='bx bxl-whatsapp'></i>
+                            <i class='bx bxl-github'></i>
+                            <i class='bx bxl-tumblr'></i>
+                        </div>
+
                     </div>
 
+                    <div class="footer__about">
+                        <h5 class="footer__subtitle">Useful Links</h5>
+                        <ul>
+
+                            <li>
+                                <a href="#home"><i class='bx bx-chevrons-right'></i>Home</a>
+                            </li>
+                            <li>
+                                <a href="#about"><i class='bx bx-chevrons-right'></i>About</a>
+                            </li>
+                            <li>
+                                <a href="#services"><i class='bx bx-chevrons-right'></i>Services</a>
+                            </li>
+                            <li>
+                                <a href="#pricing"><i class='bx bx-chevrons-right'></i>Pricing</a>
+                            </li>
+                            <li>
+                                <a href="#work"><i class='bx bx-chevrons-right'></i>Testimonials</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="footer__services">
+                        <h5 class="footer__subtitle">Our Services</h5>
+                        <ul>
+
+                            <li>
+                                <a href="https://github.com/twbs/bootstrap/tree/v4-dev"><i
+                                        class='bx bx-chevrons-right'></i>My clients say</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/twbs/bootstrap/tree/v4-dev"><i
+                                        class='bx bx-chevrons-right'></i>My clients say</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/twbs/bootstrap/tree/v4-dev"><i
+                                        class='bx bx-chevrons-right'></i>My clients say</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/twbs/bootstrap/tree/v4-dev"><i
+                                        class='bx bx-chevrons-right'></i>My clients say</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/twbs/bootstrap/tree/v4-dev"><i
+                                        class='bx bx-chevrons-right'></i>My clients say</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="footer__support">
+                        <h5 class="footer__subtitle">Join Our Newsletter</h5>
+                        <p class="footer__description">Lorem ipsum dolor dolor dolor sit amet, consectetur adipisicing
+                            elit. </p>
+                        <form class="footer__form" action="" method="post">
+
+                            <input type="email" placeholder="Insert your email">
+                            <input class="footer__submit" type="submit" value="Subscribe">
+
+
+                        </form>
+                    </div>
                 </div>
 
-                <div class="footer__about">
-                    <h5>Useful Links</h5>
-                    <ul>
 
-                        <li>
-                            <a href="#home"><i class='bx bx-chevrons-right'></i>Home</a>
-                        </li>
-                        <li>
-                            <a href="#about"><i class='bx bx-chevrons-right'></i>About</a>
-                        </li>
-                        <li>
-                            <a href="#services"><i class='bx bx-chevrons-right'></i>Services</a>
-                        </li>
-                        <li>
-                            <a href="#pricing"><i class='bx bx-chevrons-right'></i>Pricing</a>
-                        </li>
-                        <li>
-                            <a href="#work"><i class='bx bx-chevrons-right'></i>Testimonials</a>
-                        </li>
+                <div class="footer__bottom">
 
-                    </ul>
-                </div>
 
-                <div class="footer__services">
-                    <h5>Our Services</h5>
-                    <ul>
+                    <div class="footer__copy ">
+                        <p>
+                            &#169; BatuhanKoruyan. All rigths reserved
+                        </p>
+                        <p>
+                            &#169; Transport a Logistics Solutions
+                        </p>
+                    </div>
 
-                        <li>
-                            <a href="https://github.com/twbs/bootstrap/tree/v4-dev"><i
-                                    class='bx bx-chevrons-right'></i>My clients say</a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/twbs/bootstrap/tree/v4-dev"><i
-                                    class='bx bx-chevrons-right'></i>My clients say</a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/twbs/bootstrap/tree/v4-dev"><i
-                                    class='bx bx-chevrons-right'></i>My clients say</a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/twbs/bootstrap/tree/v4-dev"><i
-                                    class='bx bx-chevrons-right'></i>My clients say</a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/twbs/bootstrap/tree/v4-dev"><i
-                                    class='bx bx-chevrons-right'></i>My clients say</a>
-                        </li>
 
-                    </ul>
-                </div>
 
-                <div class="footer__support">
-                    <h5>Join Our Newsletter</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-                    <form action="" method="post">
-                        <input type="email" name="email"><input type="submit" value="Subscribe">
-                    </form>
+
+
                 </div>
 
             </div>
+
+
+
 
         </footer>
 
@@ -784,28 +822,8 @@
     <script src="index.js"></script>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 3,
-            spaceBetween: 5,
-            slidesPerGroup: 1,
-            loop: true,
-            loopFillGroupWithBlank: true,
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
 
+    <script src="swiper.js"></script>
 </body>
 
 </html>

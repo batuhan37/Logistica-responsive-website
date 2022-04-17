@@ -1,12 +1,11 @@
 @import "./variables";
 @import "./global";
-@import "./mobile";
 
 //
-@mixin flex {
+@mixin flex($content) {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: $content;
     flex: 1;
 }
 
@@ -22,6 +21,7 @@ header {
     position: sticky;
     top: 0;
     background: white;
+    z-index: 2;
 
     .nav__logo {
         background-color: $red;
@@ -41,9 +41,30 @@ header {
 // <!-- ===================================================================Home__section=================================================================================== -->
 
 .home__section {
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/carousel-1.jpg);
+    // background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/carousel-1.jpg);
+    background-image: url(../img/carousel-1.jpg);
+
     background-position: center;
     background-size: cover;
+    transition: 5s;
+    animation-name: animate;
+    animation-direction: alternate-reverse;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+
+    @keyframes animate {
+        0%,100% {
+            background-image: url(../img/carousel-1.jpg);
+        }
+
+        75%{
+            background-image: url(../img/carousel-2.jpg);
+        }
+    }
+
     .home__content {
         padding: 10rem 0;
         color: white;
@@ -53,8 +74,8 @@ header {
             margin-bottom: 20px;
         }
         .home__subtitle {
-            font-size: 60px;
-            line-height: 60px;
+            font-size: $big-title;
+            line-height: $big-title;
 
             .home__title-red {
                 color: $red;
@@ -131,23 +152,22 @@ header {
             margin-bottom: 20px;
         }
         .about__info {
-            @include flex();
-            justify-content: start;
+            @include flex(flex-start);
             .about__iconbox {
                 margin-bottom: 40px;
                 .about__iconbox-title {
                     font-weight: 900;
-                    font-size: 20px;
+                    font-size: $iconbox-title;
                     margin-bottom: 10px;
                 }
 
                 .bi-globe {
                     color: $red;
-                    font-size: 36px;
+                    font-size: $globe-icon;
                 }
                 .bxs-truck {
                     color: $red;
-                    font-size: 46px;
+                    font-size: $truck-icon;
                 }
             }
         }
@@ -197,11 +217,11 @@ header {
         margin-bottom: 20px;
     }
     .skills__info {
-        @include flex();
-        justify-content: start;
+        @include flex(flex-start);
+
         .skills__info-icon {
             background-color: $red;
-            font-size: 40px;
+            font-size: $info-icon;
             color: white;
             padding: 0 10px;
             margin-right: 10px;
@@ -211,15 +231,14 @@ header {
             font-size: $subtitle;
         }
         .skills__info-number {
-            font-size: 34px;
-            line-height: 30px;
+            font-size: $card-title;
+            line-height: $card-title;
             color: $red;
             font-weight: 500;
         }
     }
     .skills__box {
-        @include flex();
-        justify-content: center;
+        @include flex(center);
 
         .skills__card {
             margin: 10px 10px 10px 0px;
@@ -227,10 +246,10 @@ header {
             padding: 10px 100px 20px 20px;
 
             .skills__card-icon {
-                font-size: 36px;
+                font-size: $globe-icon;
             }
             .skills__card-title {
-                font-size: 36px;
+                font-size: $globe-icon;
             }
         }
         .card-1 {
@@ -284,7 +303,7 @@ header {
                 }
             }
             .services__card-title {
-                font-size: 24px;
+                font-size: $services-card-title;
                 margin: 10px 0px;
             }
             .services__card-description {
@@ -334,11 +353,9 @@ header {
         color: gray;
     }
     .company__info {
-        @include flex();
-        justify-content: start;
-        align-items: flex-start;
+        @include flex(flex-start);
         .company__info-icon {
-            font-size: 40px;
+            font-size: $info-icon;
             color: $red;
             margin-right: 20px;
         }
@@ -465,11 +482,11 @@ header {
         margin-bottom: 20px;
     }
     .contact__info {
-        @include flex();
-        justify-content: start;
+        @include flex(flex-start);
+
         .contact__info-icon {
             background-color: $red;
-            font-size: 40px;
+            font-size: $info-icon;
             color: white;
             padding: 0 10px;
             margin-right: 10px;
@@ -479,8 +496,8 @@ header {
             font-size: $subtitle;
         }
         .contact__info-number {
-            font-size: 34px;
-            line-height: 30px;
+            font-size: $card-title;
+            line-height: $card-title;
             color: $red;
             font-weight: 500;
         }
@@ -564,7 +581,7 @@ header {
                 }
             }
             .team__card-title {
-                font-size: 24px;
+                font-size: $services-card-title;
                 margin: 10px 0px;
             }
             .team__card-description {
@@ -588,7 +605,7 @@ header {
 // <!-- ===================================================================testimonial__seection=================================================================================== -->
 
 .testimonial__container {
-padding-bottom: 7rem;
+    padding-bottom: 7rem;
     .testimonial__content {
         text-align: center;
         .testimonial__title {
@@ -613,12 +630,12 @@ padding-bottom: 7rem;
 
     .swiper {
         width: 100%;
-      
+
         .swiper-wrapper {
             display: flex;
 
             .swiper-slide {
-                font-size: 18px;
+                font-size: $subtitle;
                 /* Center slide text vertically */
 
                 -webkit-box-pack: center;
@@ -669,22 +686,140 @@ padding-bottom: 7rem;
     }
 }
 
-// <!-- ===================================================================testimonial__seection=================================================================================== -->
+// <!-- ===================================================================footer__seection=================================================================================== -->
 .footer__section {
-    padding: 7rem 0;
-   background-color: #0f073d;
-   background-image: url(../img/map.png);
-   background-position: center;
-   background-size: cover;
-   color: white;
-    .footer__container {
-        
+    padding-top: 7rem;
+    padding-bottom: 1rem;
+    background-color: #07031d;
+    background-image: url(../img/map.png);
+    background-position: center;
+    background-size: cover;
+    color: white;
+    .footer__top {
         display: grid;
-        align-items: center;
         gap: 1rem;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        li a{
-            color: white;
+
+        ul {
+            padding: 0;
+            li {
+                a {
+                    color: rgb(158, 154, 154);
+                    font-size: $small-font-size;
+
+                    i {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+
+        .footer__subtitle {
+            margin-bottom: 20px;
+            font-size: $subtitle;
+            font-weight: 900;
+        }
+        .footer__contact {
+            font-size: 14px;
+            line-height: 25px;
+            .footer__contact-icons {
+                .bx {
+                    font-size: $text;
+                    border: 2px solid;
+                    border-color: rgba(233, 233, 233, 0.3);
+                    border-radius: 50%;
+                    padding: 4px;
+                }
+            }
+        }
+        .footer__description {
+            color: rgb(158, 154, 154);
+            font-size: $small-font-size;
+        }
+        .footer__form {
+            background-color: white;
+            padding: 5px;
+            display: flex;
+            input {
+                border: 0;
+            }
+            .footer__submit {
+                color: white;
+                padding: 5px 10px;
+                border-radius: 2px;
+                font-weight: bold;
+                border: 0px;
+                transition: 1s;
+                background-color: $red;
+                grid-column-start: 1;
+                grid-column-end: 3;
+                &:hover {
+                    opacity: 50%;
+                }
+            }
+        }
+    }
+    .footer__bottom {
+        padding-top: 50px;
+       
+        .footer__copy {
+            @include flex(space-between);
+            padding-top: 20px;
+            border-top: 1px solid ;
+            border-color: rgba(233, 233, 233, 0.3);
+            color: rgb(158, 154, 154);
+            font-size: $small-font-size;
+
+        }
+    }
+}
+// <!-- ===================================================================animation=================================================================================== -->
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 3s ease;
+}
+
+.reveal.animate {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+// <!-- ===================================================================mobile=================================================================================== -->
+
+@media screen and (max-width: 968px) {
+    .about__container,
+    .skills__container,
+    .contact__container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .company__container {
+        grid-template-columns: 1fr;
+        .company__picture {
+            text-align: center;
+        }
+    }
+    .services__container {
+        .services__info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+    }
+
+    .pricing__container {
+        .pricing__info {
+            grid-template-columns: 1fr 1fr;
+            padding: 0px;
+        }
+    }
+
+    .team__container {
+        .team__info {
+            grid-template-columns: 1fr 1fr;
         }
     }
 }
